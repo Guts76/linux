@@ -27,3 +27,19 @@ find . -type f -exec sed -i 's/2000/test_IP/g' {} +
 ```bash
 nohup command & 
 ```
+
+## Script Shell
+
+```shell
+#!/bin/bash
+
+Original=("CP01" "CP02")
+Cible=("CP01" "CP02")
+
+len=${#Original[@]}
+
+for((j=0; j<$len; j++))
+        do
+                find . -type f -exec sed -i "s/${Original[$j]}/${Cible[$j]}/g" {} +
+        done
+```
