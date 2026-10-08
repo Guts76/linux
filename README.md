@@ -21,3 +21,9 @@ Find all occurences of "2000" in all the files under . by "test_IP"
 ```bash
 find . -type f -exec sed -i 's/2000/test_IP/g' {} +
 ```
+
+## nohup and &
+
+```bash
+nohup command & 
+```
